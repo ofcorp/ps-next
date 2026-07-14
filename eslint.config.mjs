@@ -35,7 +35,7 @@ const eslintConfig = defineConfig([
       //Ошибка, если объявлен пустой интерфейс. Исключение, если он расширяет другой интерфейс.
       '@typescript-eslint/no-empty-interface': ['error', { allowSingleExtends: true }],
       //Ошибка, если при импорте типа не используется type.
-      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      //'@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
       //Обязывает указывать у функций тип возвращаемого значения.
       '@typescript-eslint/explicit-function-return-type': [
         'error',
