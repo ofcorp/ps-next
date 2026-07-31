@@ -1,0 +1,11 @@
+.like {
+  display: flex;
+  flex-direction: row;
+
+  font-family: var(--font-open-sans);
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+  color: var(--primary);
+}
