@@ -1,20 +1,23 @@
-import Image from 'next/image';
+import CardMini from '@/components/CardMini/CardMini';
 import styles from './page.module.css';
 import { JSX } from 'react/jsx-runtime';
 
+const cardData = {
+  title: 'Как работать с CSS Grid',
+  description:
+    'Грид-раскладка (CSS Grid Layout) представляет собой двумерную систему сеток в CSS. Гриды подойдут и для верстки основных областей страницы..',
+  imageUrl: './image1.png',
+  category: 'Front-end',
+  postedAt: '1 месяц назад',
+  likes: 4,
+  linkUrl: 'article/1',
+  readTime: '3 минуты',
+};
+
 export default function Home(): JSX.Element {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-      </main>
-    </div>
+    <main className={styles.main}>
+      <CardMini {...cardData} />
+    </main>
   );
 }
