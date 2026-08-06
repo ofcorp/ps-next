@@ -1,6 +1,7 @@
 import CardMini from '@/components/CardMini/CardMini';
 import styles from './page.module.css';
 import { JSX } from 'react/jsx-runtime';
+import LikeButton from '@/components/LikeButton/LikeButton';
 
 const cardData = {
   title: 'Как работать с CSS Grid',
@@ -18,6 +19,7 @@ export default function Home(): JSX.Element {
   return (
     <main className={styles.main}>
       <CardMini {...cardData} />
+      <LikeButton />
     </main>
   );
 }

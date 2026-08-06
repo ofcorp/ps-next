@@ -1,0 +1,16 @@
+.likebutton {
+  width: 48px;
+  height: 48px;
+  border: 1px solid var(--black);
+  border-radius: 40px;
+
+  background-color: var(--background);
+}
+
+.likebutton:hover {
+  border: 1px solid var(--blue);
+}
+
+.liked {
+  background-color: var(--primary);
+}
