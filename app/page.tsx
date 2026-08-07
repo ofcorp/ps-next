@@ -15,11 +15,13 @@ const cardData = {
   readTime: '3 минуты',
 };
 
+const postId = 1;
+
 export default function Home(): JSX.Element {
   return (
     <main className={styles.main}>
       <CardMini {...cardData} />
-      <LikeButton />
+      <LikeButton id={postId} />
     </main>
   );
 }
