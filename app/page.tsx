@@ -1,6 +1,9 @@
+'use client';
+
+import { JSX, useState } from 'react';
 import CardMini from '@/components/CardMini/CardMini';
 import styles from './page.module.css';
-import { JSX } from 'react/jsx-runtime';
+import LikeButton from '@/components/LikeButton/LikeButton';
 
 const cardData = {
   title: 'Как работать с CSS Grid',
@@ -14,10 +17,35 @@ const cardData = {
   readTime: '3 минуты',
 };
 
+const postId = 1;
+
 export default function Home(): JSX.Element {
+  const [liked, setLiked] = useState<boolean>(false);
+
+  const handleLike = async (): Promise<void> => {
+    try {
+      const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ liked: !liked }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+
+      setLiked((currentLiked) => !currentLiked);
+    } catch (error) {
+      console.error('Error liking the post:', error);
+    }
+  };
+
   return (
     <main className={styles.main}>
       <CardMini {...cardData} />
+      <LikeButton liked={liked} onLike={handleLike} />
     </main>
   );
 }
