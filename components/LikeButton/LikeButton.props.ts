@@ -1,3 +1,4 @@
 export interface LikeButtonProps {
-  id: number;
+  liked: boolean;
+  onLike: () => Promise<void> | void;
 }
