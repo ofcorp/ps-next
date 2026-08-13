@@ -1,6 +1,24 @@
+.h1 {
+  font-family: var(--font-open-sans);
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black);
+}
+
 .h2 {
   font-family: var(--font-open-sans);
   font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black);
+}
+
+.h3 {
+  font-family: var(--font-open-sans);
+  font-size: 14px;
   font-weight: 700;
   font-style: normal;
   line-height: normal;
