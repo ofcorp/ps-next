@@ -5,7 +5,7 @@
   align-items: flex-start;
 
   box-sizing: border-box;
-  width: 350px;
+  width: 100%;
   padding: 10px;
   border: 1px solid var(--light-gray);
   border-radius: 5px;
@@ -68,7 +68,7 @@
   align-items: flex-start;
   justify-content: center;
 
-  width: 330px;
+  width: 100%;
 }
 
 .bottom {
