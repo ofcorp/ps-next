@@ -9,7 +9,7 @@ export default function Header(): JSX.Element {
     <div className={styles.header}>
       <Title tag={'h1'}>.my_blog</Title>
       <Image src="/logo.png" alt="Logo" width={80} height={80} />
-      <ShowGithub />
+      <ShowGithub link={'https://github.com/ofcorp/ps-next/pull/8'} />
     </div>
   );
 }
