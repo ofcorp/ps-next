@@ -4,5 +4,6 @@ export interface ButtonProps extends DetailedHTMLProps<
   ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
 > {
+  link: string;
   children: ReactNode;
 }

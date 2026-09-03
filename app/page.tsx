@@ -21,7 +21,7 @@ export default async function Home(): Promise<JSX.Element> {
             postedAt=""
             likes={0}
             imageUrl="/image1.png"
-            linkUrl={`/article/${post.id}`}
+            linkUrl={`/${post.id}`}
             readTime=""
           />
         ))}
