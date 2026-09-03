@@ -34,7 +34,7 @@ export default function CardMini(cardData: CardMiniProps): JSX.Element {
       </div>
       <div className={styles.bottom}>
         <div className={styles.readtime}>{cardData.readTime}</div>
-        <CardButton>Читать</CardButton>
+        <CardButton link={cardData.linkUrl}>Читать</CardButton>
       </div>
     </div>
   );
