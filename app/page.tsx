@@ -26,7 +26,6 @@ export default async function Home(): Promise<JSX.Element> {
           />
         ))}
       </div>
-      <LikeButton postId={postId} />
     </main>
   );
 }

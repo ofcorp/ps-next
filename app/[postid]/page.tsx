@@ -1,6 +1,11 @@
 import { getPostById } from '@/api/posts';
 import { notFound } from 'next/navigation';
 import { JSX } from 'react/jsx-runtime';
+import styles from './page.module.css';
+import Title from '@/components/Title/Title';
+import Like from '@/components/Like/Like';
+import PostText from '@/components/PostText/PostText';
+import LikeButton from '@/components/LikeButton/LikeButton';
 
 export default async function PostPage({
   params,
@@ -15,9 +20,26 @@ export default async function PostPage({
   }
 
   return (
-    <div>
-      <h1>{post.title}</h1>
-      <p>{post.body}</p>
+    <div className={styles.wrapper}>
+      <Title tag={'h1'}>{post.title}</Title>
+      <div className={styles.params}>
+        <span>Front-end</span>·<span>1 месяц назад</span>·<span>1 месяц назад</span>·
+        <Like count={2} />
+      </div>
+      <div
+        className={styles.image}
+        style={{
+          backgroundImage: 'url(/photo.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <PostText>{post.body}</PostText>
+      <div className={styles.likeme}>
+        Понравилось? Жми
+        <LikeButton postId={post.id} />
+      </div>
     </div>
   );
 }

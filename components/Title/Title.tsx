@@ -4,6 +4,8 @@ import { JSX } from 'react/jsx-runtime';
 
 export default function Title({ tag, children }: TitleProps): JSX.Element {
   switch (tag) {
+    case 'h0':
+      return <h1 className={styles.h0}>{children}</h1>;
     case 'h1':
       return <h1 className={styles.h1}>{children}</h1>;
     case 'h2':
