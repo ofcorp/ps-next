@@ -4,8 +4,8 @@ import { JSX } from 'react/jsx-runtime';
 import styles from './page.module.css';
 import Title from '@/components/Title/Title';
 import Like from '@/components/Like/Like';
-import PostText from '@/components/PostText/PostText';
 import LikeButton from '@/components/LikeButton/LikeButton';
+import parse from 'html-react-parser';
 
 export default async function PostPage({
   params,
@@ -35,7 +35,7 @@ export default async function PostPage({
           backgroundRepeat: 'no-repeat',
         }}
       />
-      <PostText>{post.body}</PostText>
+      <div className={styles.text}>{parse(post.body)}</div>
       <div className={styles.likeme}>
         Понравилось? Жми
         <LikeButton postId={post.id} />
