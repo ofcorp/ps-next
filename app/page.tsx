@@ -1,10 +1,7 @@
 import { JSX } from 'react';
 import CardMini from '@/components/CardMini/CardMini';
 import styles from './page.module.css';
-import LikeButton from '@/components/LikeButton/LikeButton';
 import { getPosts } from '@/api/posts';
-
-const postId = 1;
 
 export default async function Home(): Promise<JSX.Element> {
   const posts = await getPosts();
@@ -26,7 +23,6 @@ export default async function Home(): Promise<JSX.Element> {
           />
         ))}
       </div>
-      <LikeButton postId={postId} />
     </main>
   );
 }

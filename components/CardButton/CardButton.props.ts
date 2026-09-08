@@ -1,9 +1,6 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
+import { AnchorHTMLAttributes, ReactNode } from 'react';
 
-export interface ButtonProps extends DetailedHTMLProps<
-  ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
-> {
+export interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   link: string;
   children: ReactNode;
 }
