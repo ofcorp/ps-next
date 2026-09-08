@@ -1,6 +1,5 @@
 import { IPost } from '@/interfaces/post.interface';
 import { API } from './api';
-import { ISinglePost } from '@/interfaces/singlePost.interface';
 
 export async function getPosts(): Promise<IPost[]> {
   const res = await fetch(API.posts, {
@@ -12,8 +11,7 @@ export async function getPosts(): Promise<IPost[]> {
   return res.json();
 }
 
-export async function getPostById(id: string): Promise<ISinglePost | null> {
-  console.log(`${API.posts}/${id}`);
+export async function getPostById(id: string): Promise<IPost | null> {
   const res = await fetch(`${API.posts}/${id}`, {
     method: 'GET',
     headers: new Headers({ 'content-type': 'application/json' }),
