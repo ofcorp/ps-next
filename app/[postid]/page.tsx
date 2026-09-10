@@ -6,6 +6,7 @@ import Title from '@/components/Title/Title';
 import Like from '@/components/Like/Like';
 import LikeButton from '@/components/LikeButton/LikeButton';
 import parse from 'html-react-parser';
+import Comments from '@/components/Comments/Comments';
 
 export default async function PostPage({
   params,
@@ -40,6 +41,8 @@ export default async function PostPage({
         Понравилось? Жми
         <LikeButton postId={post.id} />
       </div>
+      <div className={styles.commentstitle}>Комментарии</div>
+      <Comments postId={post.id} />
     </div>
   );
 }
