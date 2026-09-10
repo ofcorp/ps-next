@@ -49,3 +49,14 @@
   line-height: 32px;
   color: var(--primary);
 }
+
+.commentstitle {
+  margin-bottom: 20px;
+
+  font-family: var(--font-open-sans);
+  font-size: 28px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  color: var(--black);
+}
